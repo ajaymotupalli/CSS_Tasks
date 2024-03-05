@@ -1,0 +1,185 @@
+body, html {
+    margin: 20;
+    padding: 0;
+    height: 100%;
+}
+.container {
+    height: 100vh;
+    /* width: 100vw; */
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.cloud-container {
+    height: 100px;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    justify-content: space-evenly;
+}
+.cloud-box-1 {
+    position: relative ;
+    display: flex;
+    /* flex-direction: row; */
+    margin-top: 20px;
+    /* margin-right: 40px; */
+    /* background-color: chartreuse; */
+    animation: clouds;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    filter: blur(2px);
+}
+.cloud-box-2 {
+    position: relative ;
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+    /* margin-left: 100px; */
+    /* background-color: chartreuse; */
+    animation: clouds;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    filter: blur(2px);
+}
+
+@keyframes clouds {
+    from {
+        transform: translateX(300%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.cloud-1 {
+    /* position: relative; */
+    height: 100px;
+    width: 180px;
+    border-radius: 50% 50% 0 50%;
+    background-color: white;
+    transform: translateX(50);
+}
+.cloud-2 {
+    /* position: relative; */
+    height: 100px;
+    width: 120px;
+    /* left: 150px; */
+    margin-right: 10px;
+    border-radius: 50% 50% 50% 0;
+    background-color: white;
+    transform: translateX(50);
+}
+.boat {
+    height: 150px;
+    width: 250px;
+    /* background-color: white; */
+    margin-top: 32vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* overflow: hidden; */
+
+    animation: boat;
+    animation-duration: 6s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+@keyframes boat {
+    from {
+        transform: translateX(700%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+.boat_con {
+    display: flex;
+    flex-direction: row;
+}
+.boat-box-1 {
+    height: 100px;
+    width: 100px;
+    background-color: rgb(247, 157, 46);
+    border-bottom-left-radius: 250%;
+}
+.boat-box-2 {
+    height: 100px;
+    width: 50px;
+    background-color: rgb(247, 157, 46);
+    /* border-bottom-left-radius: 250%; */
+}
+.boat-box-3 {
+    height: 100px;
+    width: 100px;
+    background-color: rgb(247, 157, 46);
+    border-bottom-right-radius: 250%;
+}
+.man  {
+    /* font-size: 200px; */
+    height: 20px;
+    color: rgb(14, 33, 234);
+    margin-bottom: 50px;
+}
+.sky {
+    height: 70%;
+    width: 100%;
+    background: radial-gradient(rgb(191, 152, 36),rgb(239, 72, 6));
+    overflow: hidden;
+    /* overflow-y: hidden; */
+    filter: blur(0.1px);
+}
+.sun {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    background: radial-gradient(rgb(226, 93, 10),rgb(248, 154, 4));
+    /* top -100px */
+    left: calc(50% - 100px);
+    transform: translateY(150%);
+    position: absolute;
+    box-shadow: 0px 0px 40px 125px rgb(100 93 79 / 25%);
+    filter: blur(1px);
+    overflow: hidden;
+
+    animation: sunrise;
+    animation-duration: 3.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+.sun :hover {
+    width: 50px;
+    height: 50px;
+    /* background-color: #e65525; */
+    border-radius:50%;}
+
+.ground {
+    height: 30%;
+    width: 100%;
+    background: radial-gradient(rgb(5, 244, 232),rgb(5, 182, 222));
+    overflow: hidden;
+    filter: blur(5px);
+}
+
+@keyframes sunrise {
+    from {
+        transform: translateY(200%);
+    }
+    to {
+        transform: translateY(50%);
+    }
+}
+
+/* @keyframes sunrise {
+    0%   {background: linear-gradient(rgb(226, 93, 10),rgb(239, 150, 6)); left:0px; top:0px;}
+    25%  {background-color:yellow; left:200px; top:0px;}
+    50%  {background-color:blue; left:200px; top:200px;}
+    75%  {background-color:green; left:0px; top:200px;}
+    100% {background-color:red; left:0px; top:0px;}
+} */
